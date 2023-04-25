@@ -10,6 +10,27 @@ package q4
 //Caso a lista possua apenas um elemento, a função deve retornar 3.
 
 func ClassifyPrices(prices []int) (int, error) {
-	// Seu código aqui
+	if len prices == 0 {
+		return 0, fmt.Error("lista invalida")
+	}  
+	if len(prices) == 1{
+		return 3, nil
+	}
+	i := 0
+	var crescente bool = true
+	var decrescente bool = true
+	for i < (len(prices) -1){
+		if prices[i] < prices[i+1]{
+			decrescente = false
+			break
+		}
+		i++
+	}
+	if decrescente == true{
+		return 2, nil
+	}else{
+		return 3, nil
+	}
+
 	return 0, nil
 }
