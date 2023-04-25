@@ -15,6 +15,13 @@ package q5
 //Ajude Pedro a lidar com esta tarefa fácil.
 
 func ProcessString(s string) string {
-	// Seu código aqui
+	var palavra string
+	for i := 0; i < len(palavracorreta); i++{
+		palavra += "."
+		palavra += string(palavracorreta[i])
+	}
+	palavraminuscula := strings.Tolower(palavra)
+	return palavraminuscula
+}
 	return ""
 }
